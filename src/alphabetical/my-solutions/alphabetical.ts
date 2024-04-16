@@ -1,3 +1,3 @@
 export const getAlphabeticSort = (array: string[]) => {
-  return array
+  return array.sort()
 }
