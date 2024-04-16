@@ -1,3 +1,1 @@
-export const getPowerOfTwo = (array: number[]) => {
-  return array.map(item => item ** 2)
-}
+export const getPowerOfTwo = (array: number[]) => array.map(item => item ** 2)
