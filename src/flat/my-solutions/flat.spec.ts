@@ -15,4 +15,14 @@ describe('flat', () => {
 
     expect(actual).toEqual([3, 4])
   })
+
+  it('should return a flatten array given 2 arrays of numbers with depth of 2', () => {
+    const given = [
+      [1, 2],
+      [3, 4]
+    ]
+    const actual = flat(...given)
+
+    expect(actual).toEqual([1, 2, 3, 4])
+  })
 })
