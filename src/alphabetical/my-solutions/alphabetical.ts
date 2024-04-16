@@ -1,3 +1,1 @@
-export const getAlphabeticSort = (array: string[]) => {
-  return array.sort()
-}
+export const getAlphabeticSort = (array: string[]) => array.sort((a, b) => a.localeCompare(b, 'es'))
