@@ -2,10 +2,17 @@ import { describe, expect, it } from 'vitest'
 import { flat } from './flat'
 
 describe('flat', () => {
-  it('should get the array of numbers from 1 to N', () => {
+  it('should return the array of numbers with depth of 1', () => {
     const given = [1, 2]
     const actual = flat(given)
 
     expect(actual).toEqual([1, 2])
+  })
+
+  it('should return a flatten array given an array of numbers with depth of 2', () => {
+    const given = [[3, 4]]
+    const actual = flat(...given)
+
+    expect(actual).toEqual([3, 4])
   })
 })
