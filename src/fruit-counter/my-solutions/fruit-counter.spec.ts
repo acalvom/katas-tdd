@@ -8,4 +8,11 @@ describe('getFruitsCount', () => {
 
     expect(actual).toEqual({ '🍊': 1, '🍌': 1, '🍍': 1, '🍓': 1 })
   })
+
+  it('should get an object with the fruits as keys and a count of 1 given an array with no repeated fruits', () => {
+    const given = ['🍊', '🍌', '🍍', '🍓', '🍌', '🍌', '🍓']
+    const actual = getFruitsCount(given)
+
+    expect(actual).toEqual({ '🍊': 1, '🍌': 3, '🍍': 1, '🍓': 2 })
+  })
 })
