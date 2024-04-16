@@ -1,11 +1,10 @@
-export const getFruitsCount = (array: string[]) => {
-  type FruitShop = { [key: string]: number }
+type FruitShop = { [key: string]: number }
 
-  return array.reduce((fruitShop: FruitShop, fruit: string) => {
-    if (fruitShop[fruit] === undefined) {
-      return { ...fruitShop, [fruit]: 1 }
-    } else {
-      return { ...fruitShop, [fruit]: fruitShop[fruit] + 1 }
-    }
-  }, {})
-}
+export const getFruitsCount = (array: string[]) =>
+  array.reduce(
+    (fruitShop: FruitShop, fruit: string) =>
+      fruitShop[fruit] === undefined
+        ? { ...fruitShop, [fruit]: 1 }
+        : { ...fruitShop, [fruit]: fruitShop[fruit] + 1 },
+    {}
+  )
