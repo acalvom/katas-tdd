@@ -15,4 +15,11 @@ describe('filterEvenNumbers', () => {
 
     expect(actual).toEqual([])
   })
+
+  it('should filter even numbers given an array of numbers ', () => {
+    const given = [3, 7, 1, 3, 6, 9, 12, 4]
+    const actual = filterEvenNumbers(given)
+
+    expect(actual).toEqual([3, 7, 1, 3, 9])
+  })
 })
