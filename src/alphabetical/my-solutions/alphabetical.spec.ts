@@ -8,4 +8,11 @@ describe('alphabetical', () => {
 
     expect(actual).toEqual(['mario', 'peach'])
   })
+
+  it('should return the sorted array given a unsorted array', () => {
+    const given = ['snape', 'hermione', 'ron', 'harry']
+    const actual = getAlphabeticSort(given)
+
+    expect(actual).toEqual(['harry', 'hermione', 'ron', 'snape'])
+  })
 })
