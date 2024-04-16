@@ -1,4 +1,1 @@
-export const getHighestNumber = (array: number[]) => {
-  const sortedArray = array.sort((a: number, b: number) => b - a)
-  return sortedArray.at(0)
-}
+export const getHighestNumber = (array: number[]) => array.sort().at(array.length - 1)
