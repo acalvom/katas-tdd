@@ -15,4 +15,11 @@ describe('alphabetical', () => {
 
     expect(actual).toEqual(['harry', 'hermione', 'ron', 'snape'])
   })
+
+  it('should return the sorted array given a unsorted array with special characters', () => {
+    const given = ['álava', 'Zagreb', 'corfú', 'Berlín', 'Ávila']
+    const actual = getAlphabeticSort(given)
+
+    expect(actual).toEqual(['álava', 'Ávila', 'Berlín', 'corfú', 'Zagreb'])
+  })
 })
