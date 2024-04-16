@@ -1,6 +1,5 @@
-export const getFizzBuzz = (input: number) => {
-  const arrayOfZeros = new Array(input).fill(0)
-  const arrayOfNumbers = arrayOfZeros.map((item, index) => {
+export const getFizzBuzz = (input: number) =>
+  Array.from({ length: input }, (_, index) => {
     const position = index + 1
     return position % 3 === 0 && position % 5 === 0
       ? 'fizzbuzz'
@@ -8,7 +7,5 @@ export const getFizzBuzz = (input: number) => {
       ? 'fizz'
       : position % 5 === 0
       ? 'buzz'
-      : item + position
+      : position
   })
-  return arrayOfNumbers
-}
