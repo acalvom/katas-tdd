@@ -15,4 +15,11 @@ describe('getFizzBuzz', () => {
 
     expect(actual).toEqual([1, 2, 'fizz'])
   })
+
+  it('should get the array of numbers from 1 to 2 and fizz in the 3rd position and buzz in the 5th', () => {
+    const given = 5
+    const actual = getFizzBuzz(given)
+
+    expect(actual).toEqual([1, 2, 'fizz', 4, 'buzz'])
+  })
 })
