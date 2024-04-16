@@ -1,5 +1,1 @@
-export const getSumAllNumbers = (array: number[]) => {
-  return array.reduce((acc, curr) => {
-    return acc + curr
-  }, 0)
-}
+export const getSumAllNumbers = (array: number[]) => array.reduce((acc, curr) => acc + curr, 0)
