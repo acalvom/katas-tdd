@@ -9,5 +9,8 @@ export interface Person {
 export type Group = Record<Age, Name[]>
 
 export const grouper = (people: Person[]) => {
-  return people
+  const group = people.reduce((group: Group, person: Person) => {
+    return { ...group, [person.age]: [person.name] }
+  }, {})
+  return group
 }
