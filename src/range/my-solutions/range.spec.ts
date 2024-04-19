@@ -30,4 +30,12 @@ describe('range', () => {
 
     expect(actual).toEqual([0, 1, 2, 3])
   })
+
+  it('should return an array of consecutive numbers given a start and end number when step is > 1', () => {
+    const start = 5
+    const end = 2
+    const actual = range(end, start)
+
+    expect(actual).toEqual([5, 4, 3, 2])
+  })
 })
