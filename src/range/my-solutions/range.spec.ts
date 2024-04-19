@@ -23,4 +23,11 @@ describe('range', () => {
 
     expect(actual).toEqual([2, 3, 4, 5])
   })
+
+  it('should return an array of consecutive numbers starting at 0 given an end number', () => {
+    const end = 3
+    const actual = range(end)
+
+    expect(actual).toEqual([0, 1, 2, 3])
+  })
 })
