@@ -2,10 +2,17 @@ import { describe, expect, it } from 'vitest'
 import { range } from './range'
 
 describe('range', () => {
-  it('should return an array of 2 numbers consecutive given a start and end number when step is 1', () => {
+  it('should return an array of 2 consecutive numbers given a start and end number when step is 1', () => {
     const given = 1
     const actual = range(given, given + 1)
 
     expect(actual).toEqual([1, 2])
+  })
+
+  it('should return an array of consecutive numbers starting in 1 given an end number when step is > 1', () => {
+    const end = 5
+    const actual = range(1, end)
+
+    expect(actual).toEqual([1, 2, 3, 4, 5])
   })
 })
