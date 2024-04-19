@@ -10,7 +10,9 @@ export type Group = Record<Age, Name[]>
 
 export const grouper = (people: Person[]) => {
   const group = people.reduce((group: Group, person: Person) => {
-    return { ...group, [person.age]: [person.name] }
+    if (!group[person.age]) return { ...group, [person.age]: [person.name] }
+    else return { ...group, [person.age]: [...group[person.age], person.name] }
   }, {})
+
   return group
 }
