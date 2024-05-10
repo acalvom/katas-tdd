@@ -49,4 +49,11 @@ describe('calculator', () => {
 
     expect(actual).toEqual(-4)
   })
+
+  it('should calculate with two digits number', () => {
+    const input = '-5 + 1 - 2 + 10'
+    const actual = calculator(input)
+
+    expect(actual).toEqual(4)
+  })
 })
