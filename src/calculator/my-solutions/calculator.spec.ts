@@ -21,4 +21,11 @@ describe('calculator', () => {
 
     expect(actual).toEqual(6)
   })
+
+  it('should substract two numbers', () => {
+    const input = '1 - 2'
+    const actual = calculator(input)
+
+    expect(actual).toEqual(-1)
+  })
 })
