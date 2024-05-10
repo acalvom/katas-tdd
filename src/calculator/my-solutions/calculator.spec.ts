@@ -35,4 +35,11 @@ describe('calculator', () => {
 
     expect(actual).toEqual(2)
   })
+
+  it('should calculate with mixed operators', () => {
+    const input = '5 - 1 + 2'
+    const actual = calculator(input)
+
+    expect(actual).toEqual(6)
+  })
 })
