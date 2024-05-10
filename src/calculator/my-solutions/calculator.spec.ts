@@ -7,4 +7,11 @@ describe('calculator', () => {
 
     expect(actual).toEqual(0)
   })
+
+  it('should add two numbers', () => {
+    const input = '1 + 2'
+    const actual = calculator(input)
+
+    expect(actual).toEqual(3)
+  })
 })
