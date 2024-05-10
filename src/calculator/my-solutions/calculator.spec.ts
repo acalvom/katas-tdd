@@ -42,4 +42,11 @@ describe('calculator', () => {
 
     expect(actual).toEqual(6)
   })
+
+  it('should calculate with mixed operators starting with negative number', () => {
+    const input = '-5 - 1 + 2'
+    const actual = calculator(input)
+
+    expect(actual).toEqual(-4)
+  })
 })
